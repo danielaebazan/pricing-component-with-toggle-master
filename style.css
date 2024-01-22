@@ -19,59 +19,191 @@
         align-items: center;
     }
 
+    .title {
+        width: 100%;
+        text-align: center;
+        margin: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .packages {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        margin: 50px;
     }
 
-    .title{
-        width: 100%;
+    .content, 
+    .content-main {
         text-align: center;
+    }
+
+    .basic,
+    .professional,
+    .master {
+        background-color: white;
+        padding: 30px;
+        box-sizing: border-box;
+        width: fit-content;
+        height: 400px;
+    }
+
+    .professional {
+        background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+        padding: 30px;
+        height: 450px;
+        border-radius: 15px;
+    }
+
+    .basic {
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+    .master {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .professional h1 {
+        color: white;
+    }
+
+    .professional h2 {
+        color: white;
+    }
+
+    .professional p {
+        color: white;
     }
 
     .title h1 {
         color: hsl(233, 13%, 49%);
         font-size: 25px;
+        padding: 15px;
     }
-
     span {
-        color:hsl(234, 14%, 74%);
+        color: hsl(234, 14%, 74%);
+        padding: 10px;
     }
 
-    h1 {
-        color: hsl(233, 13%, 49%);
-        font-size: 15px;
-    }
-
+    h1,
     p {
         color: hsl(233, 13%, 49%);
         font-size: 15px;
+        text-align: center;
     }
 
+    p {
+        padding: 15px;
+        margin: 0;
+       
+    }
+
+    .border {
+        border-top: solid 0.1px hsl(233, 13%, 49%, 0.4);
+        border-bottom: solid 0.1px hsl(233, 13%, 49%, 0.4);
+    }
+
+    .mid {
+    border-top: solid 0.1px hsl(233, 13%, 49%, 0.4);
+    border-bottom: solid 0.1px hsl(233, 13%, 49%, 0.4);
+    }
+
+    .border-main {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    .mid-main {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    
     h2 {
         color: hsl(232, 13%, 33%);
+        text-align: center;
+        font-size: 50px;
+        margin: 20px;
     }
 
-    .monthly {
+    .more-btn {
+        display: inline-block;
+        background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+        border-radius: 5px;
+        border: none;
+        padding: 15px 30px;
+        color: white;
+        font-size: 12px;
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        height: fit-content;
+        margin-top: 25px;
+    }
+
+    .professional button {
+        background: white;
+        color: hsl(237, 63%, 64%);
+    }
+
+    .switch-container {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+   input {
+       background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+       cursor: pointer;
+       margin: 1rem auto;
+       position: relative;
+       width: 50px;
+       height: 30px;
+       border-radius: 25px;
+       outline: none;
+       -webkit-appearance: none;
+   }
+
+   input::after {
+       content: '';
+       position: absolute;
+       top: 50%;
+       left: 30%;
+       transform: translate(-50%, -50%);
+       border-radius: 50%;
+       height: 1.25rem;
+       width: 1.25rem;
+       background-color: white;
+       transition: left .3s;
+   }
+
+
+   input:checked::after {
+       left: 70%;
+   }
+    
+   .monthly {
         display: none;
     }
 
-    .basic {
-        background-color: white;
-        padding: 100px;
+
+@media screen and (max-width: 375px) {
+    
+    .packages {
+            display: flex;
+            flex-direction: column;
     }
 
-    .professional {
-        background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-        padding: 100px;
-    }
-
+    .basic,
+    .professional,
     .master {
-        background-color: white;
-        padding: 100px;
+        margin-top: 20px;
+        border-radius: 15px;
     }
+}
 
-
-
-
-
+  
